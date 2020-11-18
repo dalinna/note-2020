@@ -11,20 +11,4 @@ export function initMixin(Vue){
       // vm.$mount(vm.options.el);
     // }
   }
-  // Vue.prototype.$mount = function(el){
-  //   el = document.querySelector(el);
-  //   const vm = this;
-  //   const options = vm.options;
-  //   vm.$options.el = el;
-  //   if(!options.render){
-  //     let template = options.template;
-  //     if(!template && el){
-  //       template = el.outerHTML;
-  //     }
-
-  //     const render = compileToFunctions(template);
-  //     options.render = render;
-  //   }
-  //   mounteComponent(vm, el);
-  // }
 }
