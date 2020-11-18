@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+      <div id="app" a=1 b=2 style="color:green">
+        <ul>
+            <li>{{name}}</li>
+            <li>{{age}}</li>
+        </ul>
+      </div>
+
+      <script src="/dist/vue.js" ></script>
+      <script>
+        const vm= new Vue({
+          el:'#app',
+          data(){
+            return {
+              name:'测试',
+              age:10,
+              obj:{
+                age: 1
+              },
+              arr:[1,2,3]
+            }
+          }
+        })
+        console.log('vm',vm );
+        console.log('vm.name',vm.name);
+        vm.name = '哈哈哈';
+        vm.obj = {age:'哈哈哈',name:'张三'}
+      </script>
+    </body>
+</html>
