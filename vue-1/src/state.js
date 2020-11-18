@@ -26,8 +26,6 @@ function initData(vm){
   for(let key in data){
     proxy(vm, '_data', key);  //vm[_data][key]
   }
-
-
   observe(data); // 观测数据
 }
 
