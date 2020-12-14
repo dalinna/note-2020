@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script src="./core/index.js"></script>
+<script>
+  let promise = new MyPromise((resolve,reject)=>{
+    setTimeout(()=>{
+      resolve('promise1成功');
+      // reject('失败了');
+    },500);
+  })
+  let promise2 = promise.then((value)=>{
+    console.log('---',value);
+  },(reason)=>{
+    console.log('---',reason);
+  })
+  console.log('promise2',promise2);
+  promise2.then((resolve,reject)=>{
+    setTimeout(()=>{
+      resolve('promise2成功');
+    },500);
+  })
+</script>
+</body>
+</html>

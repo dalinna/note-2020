@@ -10,11 +10,10 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-      <div id="app" a=1 b=2 style="color:green">
-        <ul>
-            <li>{{name}}</li>
-            <li>{{age}}</li>
-        </ul>
+      <div id="app" style="color:green;background:#fff">
+        <span class="122"> 123</span>
+
+        <span class="122">1张三23</span>
       </div>
 
       <script src="/dist/vue.js" ></script>
@@ -32,10 +31,6 @@
             }
           }
         })
-        console.log('vm',vm );
-        console.log('vm.name',vm.name);
-        vm.name = '哈哈哈';
-        vm.obj = {age:'哈哈哈',name:'张三'}
       </script>
     </body>
 </html>
